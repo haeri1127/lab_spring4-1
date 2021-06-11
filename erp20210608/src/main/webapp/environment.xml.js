@@ -16,13 +16,14 @@ if (nexacro.Environment)
     env.loadTypeDefinition = function ()
     {
         nexacro._setTypeDefinitionURL("typedefinition.xml");
-        nexacro._addService("theme", "file", "./_resource_/_theme_/", "", null, "", "", "");
-        nexacro._addService("initvalue", "file", "./_resource_/_initvalue_/", "", null, "", "", "");
-        nexacro._addService("xcssrc", "file", "./_resource_/_xcss_/", "", null, "", "", "");
-        nexacro._addService("imagerc", "file", "./_resource_/_images_/", "", null, "", "", "");
-        nexacro._addService("font", "file", "./_resource_/_font_/", "", null, "", "0", "0");
-        nexacro._addService("Base", "form", "./Base/", "session", null, "", "", "");
-        nexacro._addService("FrameBase", "form", "./FrameBase/", "session", null, "", "", "");
+        nexacro._addService("theme", "file", "./_resource_/_theme_/", "session", null, "", "", "");
+        nexacro._addService("initvalue", "file", "./_resource_/_initvalue_/", "session", null, "", "", "");
+        nexacro._addService("xcssrc", "file", "./_resource_/_xcss_/", "session", null, "", "", "");
+        nexacro._addService("imagerc", "file", "./_resource_/_images_/", "session", null, "", "", "");
+        nexacro._addService("font", "file", "./_resource_/_font_/", "session", null, "", "0", "0");
+        nexacro._addService("Base", "form", "./Base/", "session", null, "", "0", "0");
+        nexacro._addService("FrameBase", "form", "./FrameBase/", "session", null, "", "0", "0");
+        nexacro._addService("SvcURL", "JSP", "localhost:/8000/", "session", null, "", "0", "0");
 
     	nexacro._component_uri = (nexacro._arg_compurl ? nexacro._arg_compurl : "./nexacro17lib/component/");
     	nexacro._theme_uri = "./_resource_/_theme_/";

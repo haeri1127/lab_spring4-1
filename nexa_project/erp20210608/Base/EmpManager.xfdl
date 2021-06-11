@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="EmpManager" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Grid id="gr_emp" taborder="0" left="10" top="60" width="820" height="350" binddataset="Dataset00">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row band="head" size="24"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="empno"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:empno"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="gr_dept" taborder="1" left="865" top="60" width="375" height="350" binddataset="ds_dept">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row band="head" size="24"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="deptno"/>
+                <Cell col="1" text="dname"/>
+                <Cell col="2" text="loc"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:deptno"/>
+                <Cell col="1" text="bind:dname"/>
+                <Cell col="2" text="bind:loc"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <TextArea id="ta_console" taborder="2" left="10" top="513" width="363" height="194"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_emp">
+        <ColumnInfo>
+          <Column id="empno" type="STRING" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+      <Dataset id="ds_dept">
+        <ColumnInfo>
+          <Column id="deptno" type="INT" size="5"/>
+          <Column id="dname" type="STRING" size="256"/>
+          <Column id="loc" type="STRING" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+    </Objects>
+  </Form>
+</FDL>

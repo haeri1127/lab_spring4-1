@@ -34,6 +34,7 @@ public class EmpController implements Controller {
 		int result = 0;
 		Map<String,Object> pMap = null;
 		HttpSession session = req.getSession();
+
 		if("login".equals(requestName)) {
 			logger.info("EmpController => 로그인 호출");
 			/////////////////////// 실제 코드    /////////////////////
