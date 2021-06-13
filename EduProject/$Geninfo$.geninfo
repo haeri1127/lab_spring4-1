@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <GenInfo version="1.1">
+    <Rule>
+      <ENV rule_version="1.05"/>
+      <ADL rule_version="1.14"/>
+      <FDL rule_version="1.04"/>
+      <XCSS rule_version="1.03"/>
+      <Script rule_version="1.02"/>
+    </Rule>
+    <Info project="C:\Users\master\Documents\nexacro\17\projects\EduProject\" generated="C:\workspace_nexacro17\nexa2101\WebContent\">
+      <File url="typedefinition.xml" checksum="20210613141752" errormsg=""/>
+      <File url="appvariables.xml" checksum="20190215114310" errormsg=""/>
+      <File url="environment.xml" checksum="20180904140210" errormsg=""/>
+      <File url="_resource_\_theme_\edu_theme_m\theme.xcss" checksum="20190218113720" errormsg=""/>
+      <File url="_resource_\_theme_\edu_theme_d\theme.xcss" checksum="20190215152216" errormsg=""/>
+      <File url="App_Desktop.xadl" checksum="20180330133556" errormsg=""/>
+      <File url="_resource_\_xcss_\EduProject.xcss" checksum="20190218102312" errormsg=""/>
+      <File url="FrameBase\TopFrame.xfdl" checksum="20171222150530" errormsg=""/>
+      <File url="FrameBase\LeftFrame.xfdl" checksum="20180330133622" errormsg=""/>
+      <File url="FrameBase\MdiFrame.xfdl" checksum="20170921143944" errormsg=""/>
+      <File url="FrameBase\MainForm.xfdl" checksum="20210613114248" errormsg=""/>
+      <File url="App_Phone.xadl" checksum="20180330085054" errormsg=""/>
+      <File url="Mobile\Mobile_Main.xfdl" checksum="20190218102334" errormsg=""/>
+      <File url="Mobile\Mobile_Main_Sub.xfdl" checksum="20180105110926" errormsg=""/>
+      <File url="Base\Hello.xfdl" checksum="20180228135644" errormsg=""/>
+      <File url="FrameBase\WorkFrame.xfdl" checksum="20180123152204" errormsg=""/>
+      <File url="Form\Form_Emp.xfdl" checksum="20180904141218" errormsg=""/>
+      <File url="Form\Form_EmpMLM.xfdl" checksum="20180904141244" errormsg=""/>
+      <File url="Form\Form_Emp_Exe.xfdl" checksum="20171220120602" errormsg=""/>
+      <File url="Form\Form_Emp_Exe2.xfdl" checksum="20190219161450" errormsg=""/>
+      <File url="Form\Form_MLM.xfdl" checksum="20191129091048" errormsg=""/>
+      <File url="Form\Form_Organization.xfdl" checksum="20171121172936" errormsg=""/>
+      <File url="Form\Form_Popup.xfdl" checksum="20180124130830" errormsg=""/>
+      <File url="Form\Form_Popup_Sub.xfdl" checksum="20180124105118" errormsg=""/>
+      <File url="Form\Form_Popup_Sub2.xfdl" checksum="20180123113216" errormsg=""/>
+      <File url="Form\test.xfdl" checksum="20190219162332" errormsg=""/>
+      <File url="Popup\Pop_DeptSearch.xfdl" checksum="20180105110014" errormsg=""/>
+      <File url="Popup\Pop_DeptSearch_Exe.xfdl" checksum="20171220120854" errormsg=""/>
+      <File url="Popup\Pop_EmpSearch.xfdl" checksum="20171025101442" errormsg=""/>
+      <File url="Comp\Comp_Base.xfdl" checksum="20180226091214" errormsg=""/>
+      <File url="Comp\Comp_Base_Sub.xfdl" checksum="20171108180516" errormsg=""/>
+      <File url="Comp\Comp_Button.xfdl" checksum="20171220121446" errormsg=""/>
+      <File url="Comp\Comp_Calendar.xfdl" checksum="20171222153504" errormsg=""/>
+      <File url="Comp\Comp_CheckBox.xfdl" checksum="20171108180632" errormsg=""/>
+      <File url="Comp\Comp_Combo.xfdl" checksum="20171108180646" errormsg=""/>
+      <File url="Comp\Comp_Dataset.xfdl" checksum="20171220122036" errormsg=""/>
+      <File url="Comp\Comp_Div.xfdl" checksum="20171220123552" errormsg=""/>
+      <File url="Comp\Comp_Div_Sub.xfdl" checksum="20171220123020" errormsg=""/>
+      <File url="Comp\Comp_Edit.xfdl" checksum="20171108180854" errormsg=""/>
+      <File url="Comp\Comp_Grid.xfdl" checksum="20180201171908" errormsg=""/>
+      <File url="Comp\Comp_Grid_Cell.xfdl" checksum="20180105110034" errormsg=""/>
+      <File url="Comp\Comp_ImageViewer.xfdl" checksum="20171108180950" errormsg=""/>
+      <File url="Comp\Comp_ListBox.xfdl" checksum="20180327100456" errormsg=""/>
+      <File url="Comp\Comp_ListView.xfdl" checksum="20190214172348" errormsg=""/>
+      <File url="Comp\Comp_MaskEdit.xfdl" checksum="20171220123748" errormsg=""/>
+      <File url="Comp\Comp_ProgressBar.xfdl" checksum="20171108181038" errormsg=""/>
+      <File url="Comp\Comp_Radio.xfdl" checksum="20171108181050" errormsg=""/>
+      <File url="Comp\Comp_Spin.xfdl" checksum="20171108181102" errormsg=""/>
+      <File url="Comp\Comp_Static.xfdl" checksum="20171108181116" errormsg=""/>
+      <File url="Comp\Comp_Tab.xfdl" checksum="20171220123540" errormsg=""/>
+      <File url="Comp\Comp_Tab_Sub.xfdl" checksum="20171220123050" errormsg=""/>
+      <File url="Comp\Comp_TextArea.xfdl" checksum="20171211181902" errormsg=""/>
+      <File url="CompCom\CompCom_Arrange.xfdl" checksum="20180105154442" errormsg=""/>
+      <File url="CompCom\CompCom_Bind.xfdl" checksum="20171108181346" errormsg=""/>
+      <File url="CompCom\CompCom_Event.xfdl" checksum="20180327095348" errormsg=""/>
+      <File url="CompExt\CompExt_Excel.xfdl" checksum="20171108174854" errormsg=""/>
+      <File url="CompExt\CompExt_FileUpDown.xfdl" checksum="20180330080646" errormsg=""/>
+      <File url="CompExt\CompExt_GoogleMap.xfdl" checksum="20180329111438" errormsg=""/>
+      <File url="CompExt\CompExt_Sketch.xfdl" checksum="20171113164810" errormsg=""/>
+      <File url="CompExt\CompExt_WebBrowser.xfdl" checksum="20180330080924" errormsg=""/>
+      <File url="Exe\1_Exe_Dataset.xfdl" checksum="20190211150714" errormsg=""/>
+      <File url="Exe\2_Exe_Grid.xfdl" checksum="20190215130914" errormsg=""/>
+      <File url="Exe\3_Exe_Div_PopupDiv.xfdl" checksum="20181113172550" errormsg=""/>
+      <File url="Exe\Exe_Div_PopupDiv_Sub.xfdl" checksum="20181010180734" errormsg=""/>
+      <File url="Exe\4_Exe_Form.xfdl" checksum="20181113173424" errormsg=""/>
+      <File url="Exe\5_Exe_Comp.xfdl" checksum="20190219164052" errormsg=""/>
+      <File url="Exe\Exe_Form_Popup.xfdl" checksum="20181010230912" errormsg=""/>
+      <File url="Exe\Exe_Sample.xfdl" checksum="20190215132422" errormsg=""/>
+      <File url="Exe\Exe_Sample_Detail.xfdl" checksum="20181010230022" errormsg=""/>
+      <File url="Exe\Exe_Sample_Popup.xfdl" checksum="20181010231008" errormsg=""/>
+      <File url="Smpl\ArrangeFit.xfdl" checksum="20171222150920" errormsg=""/>
+      <File url="Smpl\ArrangeFit_Exe.xfdl" checksum="20171222151014" errormsg=""/>
+      <File url="Smpl\ArrangeSplit.xfdl" checksum="20171031164404" errormsg=""/>
+      <File url="Smpl\GridSum.xfdl" checksum="20190215114210" errormsg=""/>
+      <File url="Smpl\GridTree.xfdl" checksum="20171031164512" errormsg=""/>
+      <File url="EnvApp\EnvApp_Base.xfdl" checksum="20180327095746" errormsg=""/>
+      <File url="Mobile\Mobile_Camera.xfdl" checksum="20180105112910" errormsg=""/>
+      <File url="Mobile\Mobile_Listview.xfdl" checksum="20190215134534" errormsg=""/>
+      <File url="Mobile\Mobile_Step.xfdl" checksum="20180105113114" errormsg=""/>
+      <File url="Mobile\Mobile_Work.xfdl" checksum="20180105110306" errormsg=""/>
+      <File url="Lib\Common.xjs" checksum="20170123154558" errormsg=""/>
+    </Info>
+  </GenInfo>
+</root>

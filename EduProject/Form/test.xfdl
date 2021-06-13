@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="test" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Grid id="Grid00" taborder="0" left="440" top="20" width="284" height="369" binddataset="ds_menu" autofittype="col" treeinitstatus="expand,all" treeusecheckbox="false">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24"/>
+              </Rows>
+              <Band id="body">
+                <Cell text="bind:name" displaytype="treeitemcontrol" edittype="tree" treelevel="bind:level"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_menu">
+        <ColumnInfo>
+          <Column id="code" type="STRING" size="256"/>
+          <Column id="name" type="STRING" size="256"/>
+          <Column id="level" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="code">1</Col>
+            <Col id="name">대메뉴1</Col>
+            <Col id="level">0</Col>
+          </Row>
+          <Row>
+            <Col id="code">2</Col>
+            <Col id="name">중메뉴1</Col>
+            <Col id="level">1</Col>
+          </Row>
+          <Row>
+            <Col id="code">3</Col>
+            <Col id="name">메뉴1</Col>
+            <Col id="level">2</Col>
+          </Row>
+          <Row>
+            <Col id="code">4</Col>
+            <Col id="name">메뉴2</Col>
+            <Col id="level">2</Col>
+          </Row>
+          <Row>
+            <Col id="code">5</Col>
+            <Col id="name">대메뉴2</Col>
+            <Col id="level">0</Col>
+          </Row>
+          <Row>
+            <Col id="code">6</Col>
+            <Col id="name">중메뉴2</Col>
+            <Col id="level">1</Col>
+          </Row>
+          <Row>
+            <Col id="code">7</Col>
+            <Col id="name">메뉴3</Col>
+            <Col id="level">2</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+  </Form>
+</FDL>
