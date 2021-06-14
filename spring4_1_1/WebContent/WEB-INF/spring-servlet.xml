@@ -43,11 +43,8 @@
 	<bean id="board-resolver" class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
 		<property name="mappings">
 			<props>
-<<<<<<< HEAD
 				<prop key="/upload/uploadForm.sp4">uploadForm</prop>
-=======
 				<prop key="/board/getBoardDetail.sp4">getBoardDetail</prop>
->>>>>>> c9bd61ce3c2dd42b74ef78260023b0c9a2d75432
 				<prop key="/board/getBoardList.sp4">getBoardList</prop>
 				<prop key="/board/boardInsert.sp4">boardInsert</prop>
 				<prop key="/board/jsonGetBoardList.sp4">jsonGetBoardList</prop>

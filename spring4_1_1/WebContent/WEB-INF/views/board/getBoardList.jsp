@@ -32,6 +32,10 @@
     		}		    
 		});			
 	}
+    function ins(){
+	    console.log("입력창 호출");
+	    $('#dlg_ins').dialog('open');
+	}	
 	function boardIns(){
 		
 	}
@@ -73,7 +77,7 @@
 	    });		
 	});
 </script>
-<table id="dg_board" class="easyui-datagrid" data-options="title:'게시판',toolbar:'#tb_board'" style="width:1000px;height:350px">
+<table id="dg_board" class="easyui-datagrid" data-options="title:'게시판',toolbar:'#tb_board'">
     <thead>
         <tr>
             <th>글번호</th>
@@ -113,9 +117,13 @@ else{//조회 결과가 있는데....
 </table>
     <div id="tb_board" style="padding:2px 5px;">
         <a id="btn_sel" href="#" class="easyui-linkbutton" iconCls="icon-search" plain="true">조회</a>
-        <a id="btn_ins" href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true">입력</a>
+        <a id="btn_ins" href="javascript:ins()" class="easyui-linkbutton" iconCls="icon-add" plain="true">입력</a>
         <a id="btn_upd" href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true">수정</a>
         <a id="btn_del" href="#" class="easyui-linkbutton" iconCls="icon-cancel" plain="true">삭제</a>
     </div>   
+    <!--=========================== [[글쓰기 화면 시작]] =============================-->
+    <div id="dlg_ins" class="easyui-dialog" title="글쓰기">
+    </div>    
+    <!--=========================== [[글쓰기 화면   끝 ]] =============================-->    
 </body>
 </html>

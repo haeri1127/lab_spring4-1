@@ -23,12 +23,12 @@
 		bm_file = boardDetail.get(0).get("BS_FILE").toString();
 		bm_title = boardDetail.get(0).get("BM_TITLE").toString();
 		bm_writer = boardDetail.get(0).get("BM_WRITER").toString();
-/* 		bm_content = boardDetail.get(0).get("BM_CONTENT").toString();
+ 		bm_content = boardDetail.get(0).get("BM_CONTENT").toString();
 		bm_pw = boardDetail.get(0).get("BM_PW").toString();
 		bm_no = boardDetail.get(0).get("BM_NO").toString();
 		bm_group = boardDetail.get(0).get("BM_GROUP").toString();
 		bm_pos = boardDetail.get(0).get("BM_POS").toString();
-		bm_step = boardDetail.get(0).get("BM_STEP").toString();		 */
+		bm_step = boardDetail.get(0).get("BM_STEP").toString();		 
 	}
 	out.print("size:"+size);
 %>       
@@ -43,10 +43,13 @@
 <script type="text/javascript" src="<%=path.toString() %>js/jquery.min.js"></script>
 <script type="text/javascript" src="<%=path.toString() %>js/jquery.easyui.min.js"></script> 
 <script type="text/javascript">
-//댓글쓰기
-function repleForm(){
-	$("#dlg_boardAdd").dialog('open');
-}
+	//댓글쓰기
+	function repleForm(){
+		$("#dlg_boardAdd").dialog('open');
+	}
+	function boardList(){
+		location.href="./getBoardList.sp4";
+	}
 </script>
 </head>
 <body>

@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>게시판 목록[WebContent]</title>
+<title>게시판 목록[WebContent]</title> 
 <!-- jEasyUI 시작 -->
 <link rel="stylesheet" type="text/css" href="<%=path.toString() %>themes/default/easyui.css">
 <link rel="stylesheet" type="text/css" href="<%=path.toString() %>themes/icon.css"> 
@@ -54,7 +54,7 @@
         <a href="#" class="easyui-linkbutton" iconCls="icon-cancel" plain="true">삭제</a>
     </div>   
     <!--=========================== [[글쓰기 화면 시작]] =============================-->
-    <div id="dlg_ins" class="easyui-dialog" title="글쓰기" data-options="iconCls:'icon-save'" style="width:600px;height:350px;padding:10px">
+    <div id="dlg_ins" class="easyui-dialog" title="글쓰기" data-options="iconCls:'icon-save', closed:true" style="width:600px;height:350px;padding:10px">
         <div style="margin-bottom:20px">
             <input class="easyui-textbox" label="Email:" labelPosition="top" data-options="prompt:'Enter a email address...',validType:'email'" style="width:100%;">
         </div>
