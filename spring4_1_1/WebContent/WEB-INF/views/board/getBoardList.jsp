@@ -36,9 +36,10 @@
 	    console.log("입력창 호출");
 	    $('#dlg_ins').dialog('open');
 	}	
-	function boardIns(){
-		
-	}
+    function insAction(){
+        console.log("입력액션 호출");
+        $('#board_ins').submit();
+    }
 	function boardUpd(){
 		
 	}
@@ -104,6 +105,7 @@ else{//조회 결과가 있는데....
 %>    	
         <tr>
             <td><%=rmap.get("BM_NO") %></td>
+            <td>
 <!-- 너 댓글이니? -->       
 <%
 	String imgPath = "\\board\\";
@@ -117,7 +119,7 @@ else{//조회 결과가 있는데....
 <%
 	}/////////////////end of if
 %>  
-            <td><a href="getBoardDetail.sp4?bm_no=<%=rmap.get("BM_NO")%>" style="text-decoration:none;"><%=rmap.get("BM_TITLE") %></a></td>
+            <a href="getBoardDetail.sp4?bm_no=<%=rmap.get("BM_NO")%>" style="text-decoration:none;"><%=rmap.get("BM_TITLE") %></a></td>
             
             <td><%=rmap.get("BM_DATE") %></td>
             <td><a href="download.jsp?bs_file=<%=rmap.get("BS_FILE") %>" style="text-decoration:none;"><%=rmap.get("BS_FILE") %></a></td>
@@ -136,7 +138,7 @@ else{//조회 결과가 있는데....
         <a id="btn_del" href="#" class="easyui-linkbutton" iconCls="icon-cancel" plain="true">삭제</a>
     </div>   
     <!--=========================== [[글쓰기 화면 시작]] =============================-->
-    <div id="dlg_ins" class="easyui-dialog" title="글쓰기" data-options="iconCls:'icon-save', closed:false, footer:'#ft_ins'" style="width:600px;height:650px;padding:10px">
+    <div id="dlg_ins" class="easyui-dialog" title="글쓰기" data-options="iconCls:'icon-save', closed:true, footer:'#ft_ins'" style="width:600px;height:650px;padding:10px">
     	<form id="board_ins" method="post" enctype="multipart/form-data" action="boardInsert.sp4">    
     	<input type="hidden" name="bm_no" value="0">
     	<input type="hidden" name="bm_group" value="0">
