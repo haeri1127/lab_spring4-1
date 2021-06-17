@@ -8,7 +8,7 @@
 	boardDetail = (List<Map<String,Object>>)request.getAttribute("boardDetail");
 	int size = 0;
 	String bm_email 	= null;
-	String bm_file 		= null;
+	String bs_file 		= null;
 	String bm_title 	= null;
 	String bm_writer 	= null;
 	String bm_content 	= null;
@@ -20,7 +20,7 @@
 	if(boardDetail!=null){
 		size = boardDetail.size();
 		bm_email = boardDetail.get(0).get("BM_EMAIL").toString();
-		bm_file = boardDetail.get(0).get("BS_FILE").toString();
+		bs_file = boardDetail.get(0).get("BS_FILE").toString();
 		bm_title = boardDetail.get(0).get("BM_TITLE").toString();
 		bm_writer = boardDetail.get(0).get("BM_WRITER").toString();
  		bm_content = boardDetail.get(0).get("BM_CONTENT").toString();
@@ -52,12 +52,17 @@
 		$('#board_ins').submit();
     }	
 	function updateForm(){
-		$("#dlg_upd").dialog('open');
+		//$("#dlg_upd").dialog('open');
+		$('#dlg_upd').dialog({
+		    title: '글수정',
+		    width: 700,
+		    height: 650,
+		    closed: false,
+		    cache: false,
+		    href: 'updateForm.sp4?bm_writer=<%=bm_writer%>&bm_content=<%=bm_content%>&bm_no=<%=bm_no%>&bs_file=<%=bs_file%>',
+		    modal: true
+		});		
 	}
-	function updAction(){
-		console.log("수정액션 호출");
-		$('#board_upd').submit();
-    }	
 	function boardList(){
 		location.href="./getBoardList.sp4";
 	}
@@ -126,35 +131,6 @@
 		<a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-cancel',plain:true">취소</a>
 	</div>
     <!--=========================== [[글쓰기 화면   끝 ]] =============================--> 
-    <!--=========================== [[글수정 화면 시작]] =============================-->
-    <div id="dlg_upd" class="easyui-dialog" title="글수정" data-options="iconCls:'icon-save', closed:true, footer:'#ft_ins'" style="width:600px;height:650px;padding:10px">
-    	<form id="board_upd" method="post" action="boardUpdate.sp4">    
-    	<input type="hidden" name="bm_no" value="<%=bm_no%>">
-        <div style="margin-bottom:20px">
-            <input class="easyui-textbox" name="bm_title" label="제목:" labelPosition="top" data-options="prompt:'제목'" style="width:400px;">
-        </div>
-        <div style="margin-bottom:20px">
-            <input class="easyui-textbox"  name="bm_writer" label="작성자:" labelPosition="top" data-options="prompt:'작성자'" style="width:250px;">
-        </div>        
-        <div style="margin-bottom:20px">
-            <input class="easyui-textbox"  name="bm_content" label="내용:" labelPosition="top" data-options="prompt:'내용',multiline:true, width:500, height:120">
-        </div>
-        <div style="margin-bottom:20px">
-            <input class="easyui-textbox" name="bm_email" label="Email:" labelPosition="top" data-options="prompt:'Enter a email address...',validType:'email'" style="width:100%;">
-        </div>
-        <div style="margin-bottom:20px">
-            <input class="easyui-textbox"  name="bm_pw" label="비밀번호:" labelPosition="top" style="width:200;">
-        </div>
-        <div style="margin-bottom:20px">
-            <input class="easyui-filebox" label="첨부파일:"  name="bs_file" labelPosition="top" data-options="width:'400px'" >
-        </div>
-    	</form>
-    </div>    
-    <div id="ft_ins">
-		<a href="javascript:updAction()" class="easyui-linkbutton" data-options="iconCls:'icon-save',plain:true">수정</a>
-		<a href='javascript:$("#dlg_upd").dialog("close");' class="easyui-linkbutton" data-options="iconCls:'icon-cancel',plain:true">닫기</a>
-	</div>
-    <!--=========================== [[글수정 화면   끝 ]] =============================--> 
-	
+    <div id="dlg_upd"></div>
 </body>
 </html>
