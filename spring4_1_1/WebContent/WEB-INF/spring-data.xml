@@ -16,6 +16,10 @@
 			<value>tiger</value>
 		</property>
 	</bean>
+	<!-- Transaction Manager for a single JDBC DataSource -->
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="data-source-target"/>
+	</bean>	
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="configLocation" value="WEB-INF/mybatis-config.xml"/>
 		<property name="dataSource" ref="data-source-target"/>		

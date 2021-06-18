@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.dao.DataAccessException;
 
 import com.vo.BoardMVO;
 
@@ -29,7 +30,7 @@ public class Board41MDao {
 		*/
 		return boardList;
 	}
-	public int boardMInsert(Map<String, Object> pmap) {
+	public int boardMInsert(Map<String, Object> pmap) throws DataAccessException{
 		logger.info("boardMInsert 호출 성공 : "+pmap);
 		int result = 0;
 		result = 1;

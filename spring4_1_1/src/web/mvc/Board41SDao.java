@@ -4,6 +4,7 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.dao.DataAccessException;
 
 public class Board41SDao {
 	Logger logger = Logger.getLogger(Board41SDao.class);
@@ -11,7 +12,7 @@ public class Board41SDao {
 	public void setSqlSessionTemplate(SqlSessionTemplate sqlSessionTemplate) {
 		this.sqlSessionTemplate = sqlSessionTemplate;
 	}
-	public int boardSInsert(Map<String, Object> pmap) {
+	public int boardSInsert(Map<String, Object> pmap) throws DataAccessException{
 		logger.info("boardSInsert 호출 성공");
 		int result=0;
 		pmap.put("bs_seq", 1);
