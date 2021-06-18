@@ -67,4 +67,11 @@ public class Board41Logic {
 		return result;
 	}
 
+	public int boardUpdate(Map<String, Object> pmap) {
+		logger.info("boardUpdate 호출 성공");
+		int result = 0;
+		result = boardMDao.boardMUpdate(pmap);
+		return result;
+	}
+
 }
