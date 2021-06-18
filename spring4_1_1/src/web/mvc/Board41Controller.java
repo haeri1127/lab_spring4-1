@@ -148,5 +148,21 @@ public class Board41Controller extends MultiActionController {
 			res.sendRedirect("등록실패 페이지 이동처리");
 		}
 	}
+	public void boardDelete(HttpServletRequest req, HttpServletResponse res) 
+			throws Exception
+	{
+		logger.info("boardDelete호출 성공");
+		HashMapBinder hmb = new HashMapBinder(req);
+		Map<String,Object> pmap = new HashMap<>();
+		hmb.bindPost(pmap);
+		int result = 0;
+		result = boardLogic.boardDelete(pmap);
+		if(result == 1) {
+			res.sendRedirect("./getBoardList.sp4");
+		}
+		else {
+			res.sendRedirect("등록실패 페이지 이동처리");
+		}
+	}
 
 }

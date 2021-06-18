@@ -18,7 +18,7 @@
 	 <result property="bs_file" column="bs_file"/>
 	 <result property="bs_size" column="bs_size"/>
 	</resultMap>
-	<delete id="boardMDel" parameterType="map">
+	<delete id="boardMDelete" parameterType="map">
 		DELETE FROM board_master2019 WHERE bm_no=#{bm_no}
 	</delete>
 	<delete id="boardSDel" parameterType="map">

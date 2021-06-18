@@ -73,9 +73,12 @@
 		if(db_pw == u_pw){
 			$.messager.confirm('Comfirm', '정말 삭제할거야?', function(r){
 				if (r){
-					location.href="boardDel.sp4";
+					location.href="boardDelete.sp4?bm_no=<%=bm_no%>&bs_file=<%=bs_file%>";
 				}
 			});			
+		}else{
+			alert("비번이 틀립니다.");
+			return;//함수 탈출
 		}
 	}		
 	function boardDelView(){
@@ -140,7 +143,7 @@
         <div style="margin-bottom:20px">
             <input class="easyui-textbox" id="user_pw" name="user_pw" label="비번:" labelPosition="top" data-options="prompt:'비번입력하세요'" style="width:250px;">
         </div>
-        <a href="boardDelAction()" class="easyui-linkbutton" iconCls="icon-ok" style="width:90px">확인</a>
+        <a href="javascript:boardDelAction()" class="easyui-linkbutton" iconCls="icon-ok" style="width:90px">확인</a>
         <a href="javascript:boardDelClose()" class="easyui-linkbutton" iconCls="icon-cancel" style="width:90px">닫기</a>
 	</div>    
     <!--=========================== [[글삭제 화면  끝 ]] =============================-->
