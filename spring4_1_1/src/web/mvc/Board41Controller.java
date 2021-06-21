@@ -82,18 +82,20 @@ public class Board41Controller extends MultiActionController {
 		//view.forward(req, res);
 		return mav;
 	}
-	public ModelAndView updateForm(HttpServletRequest req, HttpServletResponse res) 
+	public void updateForm(HttpServletRequest req, HttpServletResponse res) 
 			throws Exception
 	{
 		logger.info("updateForm 호출 성공");
-		HashMapBinder hmb = new HashMapBinder(req);
-		Map<String,Object> target = new HashMap<>();
-		hmb.bindPost(target);//bm_no값 담음.
-		logger.info("bm_no : "+target.get("bm_no"));
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("board/updateForm");
-		mav.addObject("target", target);
-		return mav;
+	 	String bm_no = req.getParameter("bm_no");
+		String bs_file = req.getParameter("bs_file");
+		String bm_writer = req.getParameter("bm_writer");
+		String bm_content = req.getParameter("bm_content");
+		String path = "";
+		path = "updateForm.jsp?bm_writer="+bm_writer+
+			   "&bm_content="+bm_content+
+			   "&bm_no="+bm_no+
+			   "&bs_file="+bs_file;
+		res.sendRedirect(path);
 	}
 	//json으로 내보내준다. - @RestController:String, @Controller:void, ModelAndView, String
 	//@RestController
@@ -112,8 +114,26 @@ public class Board41Controller extends MultiActionController {
 		PrintWriter out = res.getWriter();
 		out.print(imsi);
 	}
-	public void boardInsert(HttpServletRequest req, HttpServletResponse res) 
+	public void boardUpdate(HttpServletRequest req, HttpServletResponse res) 
 	throws Exception
+	{
+		logger.info("boardUpdate호출 성공");
+		HashMapBinder hmb = new HashMapBinder(req);
+		Map<String,Object> pmap = new HashMap<>();
+		//사용자가 입력한 값이나 서버에서 클라이언트에게 요청한 값 넘김.
+		//hmb.bindPost(pmap);
+		hmb.bindPost(pmap);
+		int result = 0;
+		result = boardLogic.boardUpdate(pmap);
+		if(result == 1) {
+			res.sendRedirect("./getBoardList.sp4");
+		}
+		else {
+			res.sendRedirect("등록실패 페이지 이동처리");
+		}
+	}
+	public void boardInsert(HttpServletRequest req, HttpServletResponse res) 
+			throws Exception
 	{
 		logger.info("boardInsert호출 성공");
 		HashMapBinder hmb = new HashMapBinder(req);

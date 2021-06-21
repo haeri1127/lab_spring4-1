@@ -59,10 +59,14 @@
 		    height: 650,
 		    closed: false,
 		    cache: false,
-		    href: 'updateForm.sp4?bm_writer=<%=bm_writer%>&bm_content=<%=bm_content%>&bm_no=<%=bm_no%>&bs_file=<%=bs_file%>',
+		    href: 'updateForm.jsp?bm_title=<%=bm_title%>&bm_writer=<%=bm_writer%>&bm_content=<%=bm_content%>&bm_no=<%=bm_no%>&bs_file=<%=bs_file%>',
 		    modal: true
 		});		
 	}
+	function updAction(){
+		console.log("수정액션 호출");
+		$('#board_upd').submit();
+	}		
 	function boardList(){
 		location.href="./getBoardList.sp4";
 	}

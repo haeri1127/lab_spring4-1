@@ -51,6 +51,15 @@
 		   SET bm_hit = bm_hit + 1
 		 WHERE bm_no = #{value}
 	</update>
+	<update id="boardMUpdate" parameterType="map">
+		UPDATE board_master2019
+		   SET bm_title = #{bm_title}
+		      ,bm_writer = #{bm_writer}
+		      ,bm_content = #{bm_content}
+		      ,bm_email = #{bm_email}
+		      ,bm_pw = #{bm_pw}
+		 WHERE bm_no = #{bm_no}
+	</update>
 	<update id="bmStepUpdate" parameterType="map">
 		UPDATE board_master2019
 		   SET bm_step = bm_step + 1
