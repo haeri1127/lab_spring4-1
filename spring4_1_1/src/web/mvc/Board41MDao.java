@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.dao.DataAccessException;
 
 import com.vo.BoardMVO;
 
@@ -29,7 +30,7 @@ public class Board41MDao {
 		*/
 		return boardList;
 	}
-	public int boardMInsert(Map<String, Object> pmap) {
+	public int boardMInsert(Map<String, Object> pmap) throws DataAccessException{
 		logger.info("boardMInsert 호출 성공 : "+pmap);
 		int result = 0;
 		result = 1;
@@ -59,7 +60,17 @@ public class Board41MDao {
 	public int boardMUpdate(Map<String, Object> pmap) {
 		logger.info("boardMUpdate 호출 성공");
 		int result = 0;
+<<<<<<< HEAD
 		result = sqlSessionTemplate.update("boardMUpdate",pmap);		
+=======
+		result = sqlSessionTemplate.update("boardMUpdate",pmap);	
+		return result;
+	}
+	public int boardMDelete(Map<String, Object> pmap) {
+		logger.info("boardMDelete 호출 성공");
+		int result = 0;
+		result = sqlSessionTemplate.delete("boardMDelete",pmap);	
+>>>>>>> f2f3df0b4a0237a2aa960df18ee635617021aed2
 		return result;
 	}
 	
