@@ -1,29 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<<<<<<< HEAD
 <%@ page import="java.util.*" %>       
-=======
->>>>>>> f2f3df0b4a0237a2aa960df18ee635617021aed2
 <%
 	request.setCharacterEncoding("UTF-8");
 	StringBuilder path = new StringBuilder(request.getContextPath());
 	path.append("/");	
-<<<<<<< HEAD
  	String bm_no = request.getParameter("bm_no");
 	String bs_file = request.getParameter("bs_file");
 	String bm_title = request.getParameter("bm_title");
 	String bm_writer = request.getParameter("bm_writer");
 	String bm_content = request.getParameter("bm_content");
 	out.print("updateForm:"+bm_no+", "+bm_writer+", "+bm_content+", "+bs_file);
-=======
-	//이전 화면[read.jsp-href:updateForm.jsp?bm_no=5]에서 값을 받아오기
-	String bm_no = request.getParameter("bm_no");
-	String bm_title = request.getParameter("bm_title");
-	String bs_file = request.getParameter("bs_file");
-	String bm_writer = request.getParameter("bm_writer");
-	String bm_content = request.getParameter("bm_content");
-	out.print(bm_no+", "+bm_writer+", "+bm_content+", "+bs_file);
->>>>>>> f2f3df0b4a0237a2aa960df18ee635617021aed2
 %>    
 <!DOCTYPE html>
 <html>
